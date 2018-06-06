@@ -1,0 +1,557 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
+
+// Variables
+@import "variables"
+
+// Foundation
+@import "node_modules/foundation-sites/assets/foundation.scss"
+@include foundation-everything($prototype: true)
+@import "node_modules/slick-carousel/slick/slick.scss"
+@import "node_modules/slick-carousel/slick/slick-theme.scss"
+@import "sweetalert"
+@import "fonts"
+@import "register"
+@import "products"
+
+body
+  font-family: book
+  color: #414042
+  font-size: 12pt
+  padding-top: 100.38px
+
+a
+  color: inherit
+  &:focus, &:hover
+    color: inherit
+
+// HEADER
+
+header
+  position: fixed
+  top: 0
+  width: 100%
+  background: #282B32
+  color: #fff
+  z-index: 3
+
+.content
+  width: 90%
+  margin: 0 auto
+  position: relative
+
+.header
+  @extend .grid-x
+  @extend .align-justify
+  padding: .7rem 0
+  &__logo
+    @include xy-cell($size: 15%, $gutters: 0)
+  &__menu
+    @include xy-cell($size: 55%, $gutters: 0)
+    div
+      float: left
+      &:nth-child(odd)
+        margin: 0 .4rem
+  &__session
+    text-align: right
+  &__login
+    font-size: 9pt
+    margin-bottom: .6rem
+    a
+      margin-left: .5rem
+  &__cart
+    font-size: 9pt
+
+// HOME
+
+.banner
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: calc(100vh - 100.38px)
+
+.t-destacados
+  color: #219bdd
+  font-size: 23pt
+  text-align: center
+  margin: 3rem auto 1rem
+  font-family: bebas
+  letter-spacing: 2px
+
+.products-d
+  width: 100%
+  padding: .5rem 2rem
+  border-left: 1px solid rgba(#D1D3D4, .8)
+  border-right: 1px solid rgba(#D1D3D4, .8)
+  &__img
+    height: 300px
+    text-align: center
+    @extend .grid-x
+    @extend .align-middle
+    margin-bottom: .5rem
+    position: relative
+    img
+      max-height: 100%
+      display: table
+      margin: 0 auto
+  &__discount
+    position: absolute
+    top: 0
+    left: 0
+    width: 86px
+    height: 86px
+    background: url("/img/discount-11.png") no-repeat center
+    background-size: contain
+    text-align: center
+    @extend .grid-x
+    @extend .align-middle
+    color: #fff
+    font-family: bebas
+    font-size: 19pt
+    span
+      width: 90%
+      transform: rotate(-10deg)
+  &__name
+    max-width: 80%
+    text-align: center
+    font-family: med
+    color: #414042
+    font-size: 12pt
+    text-transform: uppercase
+    margin: 0 auto
+  &__price
+    max-width: 100%
+    text-align: center
+    color: #414042
+    font-size: 13pt
+    margin-bottom: 1.2rem
+  button
+    background: #219BDD
+    color: #fff
+    font-family: bd
+    padding: .5rem .8rem
+    letter-spacing: 1px
+    font-size: 10pt
+    margin: 0 auto
+    display: table
+    img
+      vertical-align: middle
+      display: inline
+
+.slick-destacados, .slick-oferta
+  margin-bottom: 6rem
+
+.destacados-left, .destacados-right
+  position: absolute
+  z-index: 2
+  background: #ffffff
+  width: 40px
+  height: 100%
+  top: 0
+  @extend .grid-x
+  @extend .align-middle
+
+.destacados-left
+  left: -30px
+
+.destacados-right
+  right: -30px
+  img
+    transform: rotate(180deg)
+
+.contain
+  width: 95%
+  margin: 0 auto
+  position: relative
+
+.promo
+  @extend .grid-x
+  @extend .align-justify
+  &__col
+    @include xy-cell($size: 32.5%, $gutters: 0)
+    border: 1px solid rgba(#5D5D5D, .3)
+    height: 345px
+    img
+      width: 100%
+      height: 100%
+      position: relative
+      object-fit: cover
+
+.inquietudes
+  background: url("/img/contact-12.jpg") no-repeat left center
+  background-size: cover
+  padding: 2rem 0
+  margin-top: 3rem
+  &__form
+    float: right
+    width: 100%
+    max-width: 400px
+    background: #01135B
+    color: #fff
+    border-radius: 15px
+    padding: 2.5rem 2rem
+    position: relative
+    input[type="text"], input[type="email"], textarea
+      border-radius: 5px
+      &::placeholder
+        color: #858686
+        font-size: 12pt
+        font-family: 'Open Sans', sans-serif
+        font-weight: 600
+    p
+      font-size: 10pt
+      text-align: center
+      &:first-child
+        font-size: 20pt
+        font-weight: bd
+  &__row
+    @extend .grid-x
+    @extend .align-middle
+    @extend .align-justify
+    div
+      @include xy-cell($size: 68%, $gutters: 0)
+      label
+        color: #fff
+        font-size: 9pt
+      input
+        margin-right: .4rem
+        vertical-align: middle
+        margin-bottom: 0
+    button
+      @include xy-cell($size: 30%, $gutters: 0)
+      background: #00648a
+      color: #fff
+      font-family: bd
+      font-size: 11pt
+      letter-spacing: 1px
+      padding: .8rem 0
+      border-radius: 8px
+      border: 1px solid #fff
+      text-align: center
+  &__line
+    position: absolute
+    bottom: -15px
+    width: 100%
+    height: 1.78px
+    background: #a6a8ab
+    left: 0
+
+.clear
+  clear: both
+
+footer
+  background: #282b32
+  padding-bottom: 3rem
+
+.web
+  font-family: bd
+  color: #414042
+  font-size: 15pt
+  margin-bottom: 1.2rem
+
+.footer
+  padding-top: 2rem
+  background: #f1f2f2
+  &__row
+    @extend .grid-x
+    @extend .align-justify
+  &__contact
+    @include xy-cell($size: 28%, $gutters: 30, $gutter-type: padding, $gutter-position: right)
+  &__title
+    color: #219bdd
+    font-family: bd
+    font-size: 14pt
+    margin-bottom: 1.2rem
+  &__text
+    color: #414042
+    font-size: 11pt
+    span
+      color: #ec1c27
+  &__info
+    @include xy-cell($size: 20%, $gutters: 60, $gutter-type: padding)
+    ul, li
+      width: 100%
+    a
+      font-size: 11pt
+      color: #414042
+  &__news
+    @include xy-cell($size: 32%, $gutters: 30, $gutter-type: padding, $gutter-position: left)
+  &__t-news
+    font-size: 20pt
+    color: #219bdd
+    font-family: med
+    line-height: 1.2
+  &__sub
+    color: #808184
+    font-size: 8pt
+  &__fil
+    @extend .grid-x
+    @extend .align-justify
+    input
+      @include xy-cell($size: 78%, $gutters: 0)
+      border: 1px solid rgba(#808184, .8)
+    button
+      @include xy-cell($size: 19%, $gutters: 0)
+      height: 39px
+      background: #219BDD
+      font-size: 10pt
+      text-align: center
+      text-transform: uppercase
+      color: #fff
+
+.follow
+  margin-top: 2rem
+  color: #219bdd
+  font-size: 13pt
+  font-family: med
+  margin-bottom: 3rem
+
+.product
+  @extend .grid-x
+  padding: 4rem 0
+  &__img
+    @include xy-cell($size: 6 of 12, $gutters: 0, $gutter-type: margin)
+    @include breakpoint(small only)
+      @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+      height: 210px
+      overflow: hidden
+    @extend .grid-x
+    .pro-vertical
+      @include xy-cell($size: 30%, $gutters: 0, $gutter-type: margin)
+      @include breakpoint(small only)
+        @include xy-cell($size: 0%, $gutters: 0, $gutter-type: margin)
+      .img-vertical
+        max-width: 100%
+        height: 140px
+        object-fit: cover
+        margin: .35rem 0
+        border: 1px solid rgba(#D0D2D3, .4)
+    .pro-carousel
+      @include xy-cell($size: 70%, $gutters: 40, $gutter-type: margin, $gutter-position: left)
+      @include breakpoint(small only)
+        @include xy-cell($size: 100%, $gutters: 0, $gutter-type: margin, $gutter-position: left)
+      &__contain
+        width: 100%
+        height: 450px
+        display: flex
+        align-items: center
+        border: 1px solid rgba(#D0D2D3, .4)
+        @include breakpoint(small only)
+          height: 210px
+          display: inline-block
+        img
+          max-width: 95%
+          max-height: 95%
+          position: relative
+          margin: 0 auto
+  &__reg
+    font-size: 16pt
+    font-family: med
+    margin-bottom: 0
+    span
+      color: #25b24b
+  &__info
+    @include xy-cell($size: 6 of 12, $gutters: 100, $gutter-type: margin, $gutter-position: left)
+    @include breakpoint(small only)
+      @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+      text-align: center
+    h1
+      color: #414042
+      font-size: 16pt
+      font-family: med
+    .price
+      font-family: med
+      color: #414042
+      font-size: 30pt
+    &__line
+      width: 100%
+      border-top: 1px solid rgba(179,179,179,0.3)
+      margin: 1.5rem 0
+    &__content
+      @extend .grid-x
+      @extend .align-middle
+      margin-bottom: 1rem
+      &__cant
+        @include xy-cell($size: 5 of 12, $gutters: 0, $gutter-type: margin)
+        @include breakpoint(medium only)
+          @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+        @extend .align-middle
+        color: #414042
+        font-size: 10pt
+        letter-spacing: 1px
+        span
+          @include breakpoint(medium down)
+            display: none
+        input[type="number"]
+          border: 1px solid rgba(128,128,128,0.4)
+          border-radius: 5px
+          max-width: 100px
+          margin-left: .8rem
+          display: inline-block
+          margin-bottom: 0
+      &__button
+        @include xy-cell($size: 7 of 12, $gutters: 0, $gutter-type: margin)
+        @include breakpoint(medium only)
+          @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+        .button-buy
+          background: #414042
+          color: #ffffff
+          padding: .6rem 1.2rem
+          display: table
+          @include breakpoint(medium only)
+            margin-left: .8rem
+
+.login
+  max-width: 300px
+  width: 95%
+  margin: 0 auto
+  height: auto
+  padding-bottom: 4rem
+  text-align: center
+  @extend .align-middle
+  @include breakpoint(medium down)
+    height: auto
+    margin-bottom: 2rem
+  h1
+    color: $bk
+    font-weight: 700
+    font-size: 19pt
+    margin-bottom: 2rem
+  .caja
+    height: 50px
+    border: 1px solid rgba(185, 180, 178,0.4)
+    margin-bottom: 1rem
+    text-align: center
+  .b-login
+    width: 100%
+    height: 43px
+    background-color: #219BDD
+    color: $wh
+    font-size: 12pt
+    font-weight: 700
+    border: none
+    border-radius: 5px
+  .forgot
+    color: #3d3d3c
+    margin: 1.7rem 0
+  .l-register
+    color: #2dc973
+    font-weight: 500
+
+.caja, textarea
+  border: 1px solid rgba(128,128,128,0.5)
+  height: 38px
+  border-radius: 5px
+  &::placeholder
+    color: $gris
+
+#m-account
+  color: $wh
+  cursor: pointer
+  font-weight: 700
+
+textarea
+  height: 120px
+  resize: none
+
+.button-agg
+  background: #cccccc
+  color: #fff
+  letter-spacing: 1px
+  font-weight: 400
+  font-size: 10pt
+  border-radius: 5px
+  padding: .8rem 1.6rem
+  border: none
+
+.button-buy
+  background: #219bdd
+  color: $wh
+  letter-spacing: 1px
+  font-weight: 400
+  font-size: 10pt
+  border-radius: 5px
+  padding: .8rem 1.6rem
+  margin-left: 1rem
+  border: none
+  margin: 0 auto
+  display: table
+  transition: 0.5s
+  &:hover
+    padding-right: 2.8rem
+    span
+      &::after
+        opacity: 1
+        right: -20px
+  span
+    cursor: pointer
+    display: inline-block
+    position: relative
+    transition: 0.5s
+    &::after
+      content: url('/img/shopping-cart.png')
+      position: absolute
+      opacity: 0
+      top: -17px
+      right: -30px
+      transition: 0.5s
+
+.contain-pro
+  width: 95%
+  margin: 0 auto
+  text-align: center
+  &:hover
+    button
+      padding-right: 2.8rem
+      span
+        &::after
+          opacity: 1
+          right: -20px
+  &__img
+    width: 100%
+    height: 300px
+    position: relative
+    display: flex
+    align-items: center
+    text-align: center
+    img
+      margin: 0 auto
+      max-width: 95%
+      max-height: 100%
+      transition: 0.5s
+  &__info
+    margin-top: 1rem
+    color: #414042
+    font-weight: 500
+    font-size: 16pt
+    span
+      &:nth-child(odd)
+        color: #DD3753
+        margin-left: 1rem
+    &__sub
+      text-decoration: line-through
+
+  button
+    background: #414042
+    color: $wh
+    font-size: 11pt
+    border-radius: 10px
+    margin-top: 15px
+    border: 0
+    padding: .8rem 1.6rem
+    letter-spacing: 1px
+    transition: 0.5s
+    span
+      cursor: pointer
+      display: inline-block
+      position: relative
+      transition: 0.5s
+      &::after
+        content: url('/img/shopping-cart.png')
+        position: absolute
+        opacity: 0
+        top: -17px
+        right: -30px
+        transition: 0.5s

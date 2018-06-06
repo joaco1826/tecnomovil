@@ -1,0 +1,250 @@
+.pro-white
+  background: $wh
+  padding: 2rem
+.p-contain
+  @extend .grid-x
+  &__opc
+    @include xy-cell($size: 3 of 14, $gutters: 15, $gutter-type: padding, $gutter-position: right)
+    //border-right: 1px solid rgba(179,179,179,0.5)
+    @include breakpoint(medium down)
+      @include xy-cell($size: 14 of 14, $gutters: 0, $gutter-type: padding)
+      border-right: 0
+      margin-top: 1rem
+      order: 2
+    h1
+      font-weight: 500
+      font-size: 11pt
+      color: #FFEA71
+      margin-bottom: 0
+    h4
+      font-size: 8pt
+      color: $wh
+      font-weight: 700
+      margin: .8rem 0
+    &__cat
+      color: $wh
+      font-weight: 400
+      margin-bottom: .5rem
+      label
+        color: inherit
+        line-height: 0.1
+        cursor: pointer
+    &__line
+      border-bottom: 1px solid rgba(179,179,179,0.5)
+      width: 100%
+      margin: 1.5rem 0
+    &__fil
+      color: $wh
+      font-weight: 500
+      width: 100%
+      text-align: right
+      cursor: pointer
+  &__content
+    @include xy-cell($size: 14 of 14, $gutters: 40, $gutter-type: padding, $gutter-position: left)
+    @include breakpoint(medium down)
+      @include xy-cell($size: 14 of 14, $gutters: 0, $gutter-type: padding)
+      order: 1
+    &__banner
+      width: 100%
+      margin-bottom: 2rem
+
+.yellow
+  color: #FFEA71
+  font-weight: 500
+
+.cant
+  float: left
+  color: $gris
+  font-weight: 400
+
+.pagination
+  float: right
+  span
+    margin-left: .5rem
+    cursor: pointer
+
+.order
+  float: right
+  margin-right: 2rem
+  width: 20%
+  margin-top: -.4rem
+  select
+    color: $c9
+    border-radius: 5px
+    border: 1px solid rgba(134, 128, 126, 0.5)
+
+.products
+  @extend .grid-x
+  @extend .align-justify
+  &__contain
+    @include xy-cell($size: 1 of 4, $gutters: 0, $gutter-type: margin)
+    margin-bottom: 3rem
+    @include breakpoint(medium down)
+      @include xy-cell($size: 3 of 3, $gutters: 0, $gutter-type: margin)
+      margin-bottom: 1rem
+
+.product
+  @extend .grid-x
+  &__img
+    @include xy-cell($size: 6 of 12, $gutters: 0, $gutter-type: margin)
+    @include breakpoint(small only)
+      @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+      height: 210px
+      overflow: hidden
+    @extend .grid-x
+    .pro-vertical
+      @include xy-cell($size: 15%, $gutters: 0, $gutter-type: margin)
+      @include breakpoint(small only)
+        @include xy-cell($size: 0%, $gutters: 0, $gutter-type: margin)
+      .img-vertical
+        max-width: 100%
+        height: 70px
+        object-fit: cover
+        margin: .4rem 0
+    .pro-carousel
+      @include xy-cell($size: 85%, $gutters: 40, $gutter-type: margin, $gutter-position: left)
+      @include breakpoint(small only)
+        @include xy-cell($size: 100%, $gutters: 0, $gutter-type: margin, $gutter-position: left)
+      &__contain
+        width: 100%
+        height: 400px
+        display: flex
+        align-items: center
+        @include breakpoint(small only)
+          height: 210px
+          display: inline-block
+        img
+          max-width: 95%
+          max-height: 95%
+          position: relative
+          margin: 0 auto
+  &__info
+    @include xy-cell($size: 6 of 12, $gutters: 100, $gutter-type: margin, $gutter-position: left)
+    @include breakpoint(small only)
+      @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+      text-align: center
+    h1
+      color: $c3
+      font-size: 14pt
+      font-weight: 700
+      margin-top: 2rem
+    .price
+      font-weight: 700
+      color: $c3
+      font-size: 15pt
+      margin-top: 2rem
+    &__line
+      width: 100%
+      border-top: 1px solid rgba(179,179,179,0.3)
+      margin: 1.5rem 0
+    &__content
+      @extend .grid-x
+      &__cant
+        @include xy-cell($size: 5 of 12, $gutters: 0, $gutter-type: margin)
+        @include breakpoint(medium only)
+          @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+        @extend .align-middle
+        color: $c3
+        font-size: 10pt
+        letter-spacing: 1px
+        span
+          @include breakpoint(medium down)
+            display: none
+        input[type="number"]
+          border: 1px solid rgba(128,128,128,0.4)
+          border-radius: 5px
+          max-width: 100px
+          margin-left: .8rem
+          display: inline-block
+      &__button
+        @include xy-cell($size: 7 of 12, $gutters: 0, $gutter-type: margin)
+        @include breakpoint(medium only)
+          @include xy-cell($size: 12 of 12, $gutters: 0, $gutter-type: margin)
+        .button-buy
+          @include breakpoint(medium only)
+            margin-left: .8rem
+
+.button-agg
+  background: #cccccc
+  color: #fff
+  letter-spacing: 1px
+  font-weight: 400
+  font-size: 10pt
+  border-radius: 5px
+  padding: .8rem 1.6rem
+  border: none
+
+.button-buy
+  background: #FFEA71
+  color: $gr
+  letter-spacing: 1px
+  font-weight: 400
+  font-size: 10pt
+  border-radius: 5px
+  padding: .8rem 1.6rem
+  margin-left: 1rem
+  border: none
+  margin: 0 auto
+  display: table
+  transition: 0.5s
+  &:hover
+    padding-right: 2.8rem
+    span
+      &::after
+        opacity: 1
+        right: -20px
+  span
+    cursor: pointer
+    display: inline-block
+    position: relative
+    transition: 0.5s
+    &::after
+      content: url('/img/shopping-cart.png')
+      position: absolute
+      opacity: 0
+      top: -17px
+      right: -30px
+      transition: 0.5s
+
+.carousel-pro
+  padding-bottom: 4rem
+
+.description
+  width: 100%
+  background: $black
+  padding: 2rem 0
+  &__buy
+    @extend .grid-x
+    width: 90%
+    margin: 0 auto
+    @include breakpoint(medium down)
+      width: 95%
+    div
+      @include xy-cell($size: 19%, $gutters: 0, $gutter-type: margin)
+      &:nth-child(2)
+        @include xy-cell($size: 24%, $gutters: 0, $gutter-type: margin)
+      @include breakpoint(medium only)
+        @include xy-cell($size: 50%, $gutters: 0, $gutter-type: margin)
+        &:nth-child(2)
+          @include xy-cell($size: 50%, $gutters: 0, $gutter-type: margin)
+        margin-bottom: 1rem
+        text-align: center
+      @include breakpoint(small only)
+        @include xy-cell($size: 100%, $gutters: 0, $gutter-type: margin)
+        &:nth-child(2)
+          @include xy-cell($size: 100%, $gutters: 0, $gutter-type: margin)
+        margin-bottom: 1rem
+        text-align: center
+      color: $wh
+      text-align: center
+      img
+        margin: 0 1rem
+
+.range
+  color: $wh
+  margin: .7rem 0
+  font-size: 12pt
+  font-weight: 400
+  &__g
+    margin: 0 .5rem
+
