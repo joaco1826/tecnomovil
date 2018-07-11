@@ -28,6 +28,14 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/nosotros', function () {
+    return view('about');
+});
+
+Route::get('/contacto', function () {
+    return view('contact');
+});
+
 Route::get('/productos', function () {
     return view('productos', [
         'products' => \App\Models\Product::where('status', 'activo')->get(),

@@ -5,13 +5,9 @@
             <div class="header__menu align-self-bottom">
                 <div><a href="{{ url("/") }}">Inicio</a></div>
                 <div>|</div>
-                <div><a href="">Empresa</a></div>
+                <div><a href="{{ url("/nosotros") }}">Empresa</a></div>
                 <div>|</div>
                 <div><a href="{{ url("/productos") }}">Productos</a></div>
-                <div>|</div>
-                <div><a href="">Zona Social</a></div>
-                <div>|</div>
-                <div><a href="">Soporte</a></div>
                 <div>|</div>
                 <div><a href="">Contáctenos</a></div>
             </div>

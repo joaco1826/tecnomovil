@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800')
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700')
 
 // Variables
 @import "variables"
@@ -16,7 +16,7 @@
 @import "products"
 
 body
-  font-family: book
+  font-family: 'Lato', sans-serif
   color: #414042
   font-size: 12pt
   padding-top: 100.38px
@@ -52,7 +52,7 @@ header
     div
       float: left
       &:nth-child(odd)
-        margin: 0 .4rem
+        margin: 0 1.5rem
   &__session
     text-align: right
   &__login
@@ -77,7 +77,6 @@ header
   font-size: 23pt
   text-align: center
   margin: 3rem auto 1rem
-  font-family: bebas
   letter-spacing: 2px
 
 .products-d
@@ -108,7 +107,7 @@ header
     @extend .grid-x
     @extend .align-middle
     color: #fff
-    font-family: bebas
+
     font-size: 19pt
     span
       width: 90%
@@ -116,7 +115,7 @@ header
   &__name
     max-width: 80%
     text-align: center
-    font-family: med
+    font-weight: 700
     color: #414042
     font-size: 12pt
     text-transform: uppercase
@@ -130,7 +129,7 @@ header
   button
     background: #219BDD
     color: #fff
-    font-family: bd
+
     padding: .5rem .8rem
     letter-spacing: 1px
     font-size: 10pt
@@ -198,14 +197,13 @@ header
       &::placeholder
         color: #858686
         font-size: 12pt
-        font-family: 'Open Sans', sans-serif
         font-weight: 600
     p
       font-size: 10pt
       text-align: center
       &:first-child
         font-size: 20pt
-        font-weight: bd
+        font-weight: 700
   &__row
     @extend .grid-x
     @extend .align-middle
@@ -223,7 +221,7 @@ header
       @include xy-cell($size: 30%, $gutters: 0)
       background: #00648a
       color: #fff
-      font-family: bd
+
       font-size: 11pt
       letter-spacing: 1px
       padding: .8rem 0
@@ -246,7 +244,7 @@ footer
   padding-bottom: 3rem
 
 .web
-  font-family: bd
+
   color: #414042
   font-size: 15pt
   margin-bottom: 1.2rem
@@ -261,7 +259,7 @@ footer
     @include xy-cell($size: 28%, $gutters: 30, $gutter-type: padding, $gutter-position: right)
   &__title
     color: #219bdd
-    font-family: bd
+
     font-size: 14pt
     margin-bottom: 1.2rem
   &__text
@@ -281,7 +279,7 @@ footer
   &__t-news
     font-size: 20pt
     color: #219bdd
-    font-family: med
+    font-weight: 700
     line-height: 1.2
   &__sub
     color: #808184
@@ -305,7 +303,7 @@ footer
   margin-top: 2rem
   color: #219bdd
   font-size: 13pt
-  font-family: med
+  font-weight: 700
   margin-bottom: 3rem
 
 .product
@@ -348,7 +346,7 @@ footer
           margin: 0 auto
   &__reg
     font-size: 16pt
-    font-family: med
+    font-weight: 700
     margin-bottom: 0
     span
       color: #25b24b
@@ -360,9 +358,9 @@ footer
     h1
       color: #414042
       font-size: 16pt
-      font-family: med
+      font-weight: 700
     .price
-      font-family: med
+      font-weight: 700
       color: #414042
       font-size: 30pt
     &__line
@@ -555,3 +553,51 @@ textarea
         top: -17px
         right: -30px
         transition: 0.5s
+
+.about
+  background: url("/img/about-05.jpg") no-repeat left center
+  width: 100%
+  height: calc(100vh - 72px)
+  background-size: cover
+  @extend .align-middle
+  @extend .grid-x
+  &__text
+    @include xy-cell($size: 40%, $gutters: 0)
+    @include xy-cell-offset($n: 6 of 12)
+    max-width: 400px
+    font-size: 12pt
+    color: #231f20
+    font-weight: 400
+    text-align: justify
+    p:last-child
+      margin-bottom: 0
+
+.contact
+  height: 400px
+  background: url("/img/contact-05.jpg") no-repeat left center
+  background-size: cover
+  width: 100%
+  @extend .grid-x
+  @extend .align-middle
+  &__form
+    @include xy-cell($size: 55%, $gutters: 0)
+    @include xy-cell-offset($n: 4 of 12)
+    @extend .grid-x
+    label
+      font-size: 12pt
+      color: #4d4d4d
+      font-weight: 700
+  &__left
+    @include xy-cell($size: 45%, $gutters: 0)
+    padding-right: 1rem
+    input, select
+      margin-bottom: 1.18rem
+  &__right
+    @include xy-cell($size: 55%, $gutters: 0)
+    button
+      float: right
+      height: 42px
+      padding: 0 2.5rem
+      background: #219bdd
+      color: #ffffff
+      font-size: 12pt
