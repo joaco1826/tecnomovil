@@ -12,6 +12,12 @@ class ContactController
 {
     public function __invoke(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|string|min:5',
+            'phone' => 'required|string|min:7|max:12',
+            'email' => 'required|email',
+            'message' => 'required|string|min:10',
+        ]);
 
         $contact = InfoContact::create(
             $request->only([

@@ -30,7 +30,7 @@
                             Contraseña * <input type="password" id="password" class="caja" pattern="^(.){6,}$" required name="password">
                         </div>
                         <div>
-                            Nueva Contraseña * <input type="password" class="caja" required data-equalto="password" name="password_confirmation">
+                            Confirmar Contraseña * <input type="password" class="caja" required data-equalto="password" name="password_confirmation">
                         </div>
                         <div>
                             Fecha de Nacimiento <input type="text" class="caja" name="birthdate" id="date">

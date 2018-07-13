@@ -10,7 +10,7 @@ class InfoContact extends Model
     protected $table = 'infocontact';
 
     protected $fillable = [
-        'name', 'phone', 'email', 'message'
+        'name', 'type', 'phone', 'email', 'message'
     ];
 
 }

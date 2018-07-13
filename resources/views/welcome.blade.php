@@ -63,11 +63,13 @@
             <div class="inquietudes__form">
                 <p>¿INQUIETUDES?</p>
                 <p>Las responderemos en el menor tiempo posible.</p>
-                <form id="form" data-abide novalidate>
+                <form id="frmContact" data-abide novalidate>
+                    {{ csrf_field() }}
+                    <input type="hidden" name="type" value="Contacto">
                     <input type="text" name="name" required placeholder="Nombre">
-                    <input type="text" name="cellphone" required placeholder="Celular">
+                    <input type="text" name="phone" required placeholder="Celular">
                     <input type="email" name="email" required placeholder="E-mail">
-                    <textarea name="message" rows="5" placeholder="Comentario"></textarea>
+                    <textarea name="message" rows="5" placeholder="Comentario" required></textarea>
                     <div class="inquietudes__row">
                         <div><label for="accept"><input type="checkbox" id="accept" required> Acepta la política de privacidad</label></div>
                         <button type="submit">ENVIAR</button>

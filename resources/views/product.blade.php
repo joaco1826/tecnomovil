@@ -48,6 +48,10 @@
                 <img src="{{ asset("img/payu-06.jpg") }}" alt="payu">
             </div>
         </div>
+        <div class="product-cart">
+            <h3>Características</h3>
+            {!! $product->description !!}
+        </div>
     </div>
 @endsection
 @section('script')

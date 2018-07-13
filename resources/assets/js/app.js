@@ -119,6 +119,39 @@ $(document).ready(() => {
             });
         }
 
+        if (ev.target.id === 'frmContact') {
+            $.ajax({
+                type: "POST",
+                url: '/contact',
+                dataType: 'json',
+                data: $("#frmContact").serialize(),
+                statusCode: {
+                    201: function () {
+                        swal({
+                            title: "Mensaje recibido!",
+                            text: "Pronto nos pondremos en contacto con usted.",
+                            animation: "slide-from-top"
+                        });
+
+                    },
+                    501: function () {
+                        swal('¡Lo sentimos!', 'Algo ha salido mal. Es nuestra culpa.');
+                    },
+                    500: function () {
+                        swal('¡Lo sentimos!', 'Algo ha salido mal. Es nuestra culpa.');
+                    },
+                    422: function (data) {
+                        console.log(data.responseJSON);
+                        $.each(data.responseJSON.errors, function (key, text) {
+                            swal("Lo sentimos!", text);
+                            return false;
+                        });
+
+                    }
+                }
+            });
+        }
+
         if (ev.target.id === 'changePassword') {
             $.ajax({
                 type: "POST",
