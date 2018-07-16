@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Laraveles\Spanish\SpanishServiceProvider::class,
+        crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,
         /*
          * Package Service Providers...
          */

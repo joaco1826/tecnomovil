@@ -19,6 +19,15 @@
                 @endif
                     <a href="{{ url("/carrito") }}"><div class="header__cart"><img src="{{ asset("img/cart-07.png") }}" alt="cart"> {{ \Gloudemans\Shoppingcart\Facades\Cart::count() }} articulo(s) - ${{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }}</div></a>
             </div>
+            <div class="header__user">
+                <a href="{{ url("/cuenta") }}"><img style="width: 26px;" src="{{ asset("img/user.png") }}" alt="user"></a>
+                <a href="{{ url("/carrito") }}"><img src="{{ asset("img/cart-07.png") }}" alt="carrito"> (<span>{{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span>)</a>
+                <div class="header__user__menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
     </div>
 </header>

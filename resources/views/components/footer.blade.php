@@ -5,11 +5,9 @@
             <div class="footer__row">
                 <div class="footer__contact">
                     <p class="footer__title">Información de contacto</p>
-                    <p class="footer__text">Centro Comercial shopping Center
-                        Calle 34 No. 43 - 110
-                        Barranquilla - Colombia</p>
-                    <p class="footer__text"><span>CEL</span> 300 000 0000</p>
-                    <p class="footer__text"><span>EMAIL</span><br>comercial@tecnomovill.com</p>
+                    <p class="footer__text">{{ $cct->address }}</p>
+                    <p class="footer__text"><span>CEL</span> {{ $cct->phone }}</p>
+                    <p class="footer__text"><span>EMAIL</span><br>{{ $cct->email }}</p>
                 </div>
                 <div class="footer__info">
                     <p class="footer__title">Información</p>

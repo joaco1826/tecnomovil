@@ -4,9 +4,11 @@
 @section('keywords', 'tecnomobile')
 @section('content')
 <div class="slick-carousel">
-    <div>
-        <div class="banner" style="background-image: url({{ asset("img/banner-07.jpg") }})"></div>
-    </div>
+    @foreach($banners as $b)
+        <div>
+            <a href="{{ $b->link }}"><div class="banner" style="background-image: url({{ asset($b->image) }})"></div></a>
+        </div>
+    @endforeach
 </div>
 <p class="t-destacados">PRODUCTOS DESTACADOS</p>
 <div class="content">
@@ -98,6 +100,32 @@
                 slidesToScroll: 1,
                 prevArrow: $("#des-left"),
                 nextArrow: $("#des-right"),
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
 
             $(".slick-oferta").slick({
@@ -105,6 +133,32 @@
                 slidesToScroll: 1,
                 prevArrow: $("#ofe-left"),
                 nextArrow: $("#ofe-right"),
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
         });
         function cart(obj,action,qty) {

@@ -11,6 +11,7 @@
 |
 */
 
+use App\Models\About;
 use App\Models\Address;
 use App\Models\Client;
 use App\Models\Country;
@@ -21,6 +22,7 @@ Route::get('/', function () {
     return view('welcome', [
         'destacados' => Product::where(['status' => 'activo', 'featured' => 'SI'])->get(),
         'ofertas' => Product::where(['status' => 'activo'])->where('discount', '>', '0')->get(),
+        'banners' => \App\Models\Home::where('state', 'activo')->get()
     ]);
 });
 
@@ -29,7 +31,9 @@ Route::get('/product', function () {
 });
 
 Route::get('/nosotros', function () {
-    return view('about');
+    return view('about', [
+        'about' => About::find(1)
+    ]);
 });
 
 Route::get('/contacto', function () {
