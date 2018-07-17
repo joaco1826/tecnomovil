@@ -38,6 +38,14 @@ $(document).ready(() => {
         }, 300);
     });
 
+    $("#open-menu").click(function () {
+       $(".menu-mov").animate({right: 0, opacity: 1}, 300)
+    });
+
+    $(".menu-mov__close").click(function () {
+        $(".menu-mov").animate({right: -440, opacity: 0}, 300)
+    });
+
     // $(".a-menu").mouseenter(function (e) {
     //     $(".menu-contain").css('opacity', 0).css('z-index', -1);
     //     $("#"+$(this).attr('data-id')).css('z-index', 2).animate({opacity: 1}, 300);

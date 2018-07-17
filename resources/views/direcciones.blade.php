@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Yellow Club - Direcciones')
+@section('title', 'Tecnomovil del caribe - Direcciones')
 @section('content')
     <div class="content">
         <div class="blog" style="background: #fff">

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Yellow Club - Seleccionar dirección')
+@section('title', 'Tecnomovil del caribe - Seleccionar dirección')
 @section('content')
     <div class="content">
         <div class="blog" style="background: #fff">
@@ -30,7 +30,7 @@
                             @endforeach
                         </div>
                         <a href="{{ url("/nueva-direccion") }}"><input type="button" class="button-agg float-left" value="Agregar dirección" style="background-color: #999;"></a>
-                        <a class="continue" href=""><input type="button" class="button-buy float-left margin-left-1" value="Continuar al pago" style="color: #333; font-weight: 700;"></a>
+                        <a class="continue" href=""><input type="button" class="button-buy float-left" value="Continuar al pago" style="font-weight: 700;"></a>
                         <div class="clearfix"></div>
                     </form>
                 </div>

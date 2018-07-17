@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Yellow Club - Cuenta')
+@section('title', 'Tecnomovil del caribe - Cuenta')
 @section('style')
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
 @endsection

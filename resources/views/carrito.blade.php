@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Tecnomovil - Mi carrito')
+@section('title', 'Tecnomovil del caribe - Mi carrito')
 @section('content')
     <div class="content">
         <div class="blog" style="background: #fff">
@@ -41,7 +41,7 @@
                                         </td>
                                         <td>{{ number_format($pro->price, 0, ',', '.') }}</td>
                                         <td>{{ $pro->discount }}</td>
-                                        <td>{{ number_format($c->price,0,',','.') }}</td>
+                                        <td>{{ number_format($c->price * $c->qty,0,',','.') }}</td>
                                         <td> <img data-id="{{ $c->rowId }}" onclick="cart(this,'remove',0)" src="{{ asset("img/delete-28.png") }}" alt="Yellow Club delete"></td>
                                     </tr>
                                 @endforeach

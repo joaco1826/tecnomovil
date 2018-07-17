@@ -154,10 +154,14 @@
       color: $c3
       text-align: left
       font-weight: 300
+      @include breakpoint(small only)
+        width: 70%
       &:nth-child(1)
         height: 90px
         text-align: center
         width: 15%
+        @include breakpoint(small only)
+          width: 30%
       img
         max-width: 95%
         max-height: 90%
