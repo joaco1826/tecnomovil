@@ -295,6 +295,8 @@ footer
     @extend .align-justify
   &__contact
     @include xy-cell($size: 28%, $gutters: 30, $gutter-type: padding, $gutter-position: right)
+    @include breakpoint(medium down)
+      @include xy-cell($size: 60%, $gutters: 0)
   &__title
     color: #219bdd
 
@@ -307,6 +309,8 @@ footer
       color: #ec1c27
   &__info
     @include xy-cell($size: 20%, $gutters: 60, $gutter-type: padding)
+    @include breakpoint(medium down)
+      @include xy-cell($size: 40%, $gutters: 0,  $gutter-type: padding)
     ul, li
       width: 100%
     a
@@ -314,11 +318,15 @@ footer
       color: #414042
   &__news
     @include xy-cell($size: 32%, $gutters: 30, $gutter-type: padding, $gutter-position: left)
+    @include breakpoint(medium down)
+      @include xy-cell($size: 60%, $gutters: 0)
   &__t-news
     font-size: 20pt
     color: #219bdd
     font-weight: 700
     line-height: 1.2
+    @include breakpoint(medium down)
+      font-size: 16pt
   &__sub
     color: #808184
     font-size: 8pt
@@ -328,6 +336,8 @@ footer
     input
       @include xy-cell($size: 78%, $gutters: 0)
       border: 1px solid rgba(#808184, .8)
+      @include breakpoint(medium down)
+        @include xy-cell($size: 100%, $gutters: 0)
     button
       @include xy-cell($size: 19%, $gutters: 0)
       height: 39px
@@ -336,6 +346,9 @@ footer
       text-align: center
       text-transform: uppercase
       color: #fff
+      @include breakpoint(medium down)
+        @include xy-cell($size: 45%, $gutters: 0)
+        margin-bottom: 1rem
 
 .follow
   margin-top: 2rem
@@ -599,6 +612,10 @@ textarea
   background-size: cover
   @extend .align-middle
   @extend .grid-x
+  @include breakpoint(medium down)
+    background: url("/img/about-05.jpg") no-repeat right center
+    height: auto
+    padding: 2rem 0
   &__text
     @include xy-cell($size: 40%, $gutters: 0)
     @include xy-cell-offset($n: 6 of 12)
@@ -607,20 +624,28 @@ textarea
     color: #231f20
     font-weight: 400
     text-align: justify
+    @include breakpoint(medium down)
+      @include xy-cell($size: 11 of 12, $gutters: 0)
+      margin: 0 auto
     p:last-child
       margin-bottom: 0
 
 .contact
-  height: 500px
+  min-height: 500px
   background: url("/img/contact-05.jpg") no-repeat left center
   background-size: cover
   width: 100%
   @extend .grid-x
   @extend .align-middle
+  @include breakpoint(medium down)
+    padding: 2rem 0
   &__form
     @include xy-cell($size: 55%, $gutters: 0)
     @include xy-cell-offset($n: 4 of 12)
     @extend .grid-x
+    @include breakpoint(medium down)
+      @include xy-cell($size: 11 of 12, $gutters: 0)
+      margin: 0 auto
     label
       font-size: 12pt
       color: #4d4d4d
@@ -628,10 +653,16 @@ textarea
   &__left
     @include xy-cell($size: 45%, $gutters: 0)
     padding-right: 1rem
+    @include breakpoint(small only)
+      @include xy-cell($size: 100%, $gutters: 0)
     input, select
       margin-bottom: 1.3rem
+      @include breakpoint(small only)
+        margin-bottom: .6rem
   &__right
     @include xy-cell($size: 55%, $gutters: 0)
+    @include breakpoint(small only)
+      @include xy-cell($size: 100%, $gutters: 0)
     button
       float: right
       height: 42px
