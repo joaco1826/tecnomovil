@@ -6,7 +6,7 @@
 <div class="slick-carousel">
     @foreach($banners as $b)
         <div>
-            <a href="{{ $b->link }}"><div class="banner" style="background-image: url({{ asset($b->image) }})"></div></a>
+            <a href="{{ $b->link }}"><div class="banner" style="background-image: url(https://admin.tecnomovildelcaribe.com/{{ $b->image }})"></div></a>
         </div>
     @endforeach
 </div>
@@ -20,7 +20,7 @@
                 <div class="products-d">
                     <a href="{{ url("/producto/".str_slug($d->name)."/".$d->id) }}">
                         <div class="products-d__img">
-                            <img src="{{ asset($d->image) }}" alt="tecnomobile productos">
+                            <img src="https://admin.tecnomovildelcaribe.com/{{ $d->image }}" alt="tecnomobile productos">
                         </div>
                         <p class="products-d__name">{{ $d->name }}</p>
                         <p class="products-d__price">${{ number_format($d->price, 0, ',', '.') }}</p>
@@ -42,7 +42,7 @@
                     <a href="{{ url("/producto/".str_slug($d->name)."/".$d->id) }}">
                         <div class="products-d__img">
                             <div class="products-d__discount"><span>-{{ $d->discount }}%</span></div>
-                            <img src="{{ asset($d->image) }}" alt="tecnomobile productos">
+                            <img src="https://admin.tecnomovildelcaribe.com/{{ $d->image }}" alt="tecnomobile productos">
                         </div>
                         <p class="products-d__name">{{ $d->name }}</p>
                         <p class="products-d__price">${{ number_format($d->price, 0, ',', '.') }}</p>

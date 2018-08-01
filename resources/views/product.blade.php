@@ -8,24 +8,24 @@
             <div class="product__img">
                 <div class="pro-vertical">
                     <div>
-                        <img class="img-vertical" src="{{ asset($product->image) }}" alt="Yellow Club {{ $product->name }}">
+                        <img class="img-vertical" src="https://admin.tecnomovildelcaribe.com/{{ $product->image }}" alt="Yellow Club {{ $product->name }}">
                     </div>
                     @foreach($product->images as $im)
                         <div>
-                            <img class="img-vertical" src="{{ asset($im->image) }}" alt="Yellow Club {{ $product->name }}">
+                            <img class="img-vertical" src="https://admin.tecnomovildelcaribe.com/{{ $im->image }}" alt="Yellow Club {{ $product->name }}">
                         </div>
                     @endforeach
                 </div>
                 <div class="pro-carousel">
                     <div>
                         <div class="pro-carousel__contain zoom" data-src="{{ asset($product->image) }}">
-                            <img src="{{ asset($product->image) }}" alt="Yellow Club {{ $product->name }}">
+                            <img src="https://admin.tecnomovildelcaribe.com/{{ $product->image }}" alt="Yellow Club {{ $product->name }}">
                         </div>
                     </div>
                     @foreach($product->images as $im)
                         <div>
                             <div class="pro-carousel__contain zoom" data-src="{{ asset($im->image) }}">
-                                <img class="img-vertical" src="{{ asset($im->image) }}" alt="Yellow Club {{ $product->name }}">
+                                <img class="img-vertical" src="https://admin.tecnomovildelcaribe.com/{{ $im->image }}" alt="Yellow Club {{ $product->name }}">
                             </div>
                         </div>
                     @endforeach

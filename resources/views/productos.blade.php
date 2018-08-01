@@ -117,7 +117,7 @@
                                 '<div class="contain-pro">' +
                                 '<a href="{{ url("/") }}/producto/' + slug(item.name) + '/' + item.id + '">' +
                                 '<div class="contain-pro__img">' +
-                                '<img src="{{ url("/") }}/' + item.image + '" alt="Yellow Club ' + item.name + '">' +
+                                '<img src="https://admin.tecnomovildelcaribe.com/"' + item.image + '" alt="Tecnomovil del caribe ' + item.name + '">' +
                                 '</div>' +
                                 '<div class="contain-pro__info">' +
                                 item.name + '<br>' +
