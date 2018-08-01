@@ -30,7 +30,7 @@
                                     @endphp
                                     <tr>
                                         <td>
-                                            <img src="{{ asset($pro->image) }}" alt="Yellow Club productos"><br>
+                                            <img src="https://admin.tecnomovildelcaribe.com/{{ $pro->image }}" alt="Yellow Club productos"><br>
                                             {{ $c->name }}
                                             @if ($c->options->size > 0)
                                                 <br><span style="font-weight: 300">Talla: {{ $c->options->size }}</span>

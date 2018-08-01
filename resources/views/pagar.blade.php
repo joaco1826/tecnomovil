@@ -23,7 +23,7 @@
                             @endphp
                             <table class="table-buy" style="width: 100% !important;">
                                 <tr>
-                                    <td><img src="{{ asset($pro->image) }}" alt="yellow product"></td>
+                                    <td><img src="https://admin.tecnomovildelcaribe.com/{{ $pro->image }}" alt="tecnomovil del caribe product"></td>
                                     <td>{{ $c->name }}<br>Cantidad: {{ $c->qty }} <p>${{ number_format($c->price,0,',','.') }}</p></td>
                                 </tr>
                             </table>
