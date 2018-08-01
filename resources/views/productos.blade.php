@@ -104,6 +104,7 @@
                         }
                         $('.order').css('display', 'block');
                         $('.pagination').html(pag);
+                        var url = "https://admin.tecnomovildelcaribe.com/";
                         $.each(datos.data, function (i, item) {
                             if (item.discount > 0) {
                                 p1 = '<span class="contain-pro__info__sub">$ ' + addCommas(item.price) + '</span>';
@@ -117,7 +118,7 @@
                                 '<div class="contain-pro">' +
                                 '<a href="{{ url("/") }}/producto/' + slug(item.name) + '/' + item.id + '">' +
                                 '<div class="contain-pro__img">' +
-                                '<img src="https://admin.tecnomovildelcaribe.com/"' + item.image + '" alt="Tecnomovil del caribe ' + item.name + '">' +
+                                '<img src="' + url + item.image + '" alt="Tecnomovil del caribe ' + item.name + '">' +
                                 '</div>' +
                                 '<div class="contain-pro__info">' +
                                 item.name + '<br>' +
