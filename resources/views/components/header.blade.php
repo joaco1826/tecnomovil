@@ -15,7 +15,7 @@
     <div class="content">
         <div class="header">
             <div class="header__logo"><a href="{{ url("/") }}"><img src="{{ asset("img/logo-tecnomobile.png") }}" alt="logo tecnomobile"></a></div>
-            <div class="header__menu align-self-bottom">
+            <div class="header__menu">
                 <div><a href="{{ url("/") }}">Inicio</a></div>
                 <div>|</div>
                 <div><a href="{{ url("/nosotros") }}">Empresa</a></div>
@@ -24,7 +24,7 @@
                 <div>|</div>
                 <div><a href="{{ url("/contacto") }}">Contáctenos</a></div>
             </div>
-            <div class="header__session align-self-bottom">
+            <div class="header__session">
                 @if(Auth::check())
                     <div class="header__login"><a href="{{ url("/cuenta") }}">MI CUENTA</a><a href="{{ url("/register") }}">CERRAR SESIÓN</a></div>
                 @else
