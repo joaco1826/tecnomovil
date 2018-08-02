@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cart extends Model
 {
     protected $table = 'cart';
-    protected $fillable = ['name', 'reference', 'price', 'discount', 'quantity', 'order_id'];
+    protected $fillable = ['image', 'name', 'reference', 'price', 'discount', 'quantity', 'order_id'];
     protected $hidden = [
 
     ];
