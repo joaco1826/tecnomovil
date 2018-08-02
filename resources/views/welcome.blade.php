@@ -2,6 +2,16 @@
 @section('title', 'Tecnomobile - Venta de celulares y accesorios')
 @section('description', 'Tecnomobile - Venta de celulares y accesorios')
 @section('keywords', 'tecnomobile')
+@section('style')
+    <style>
+        .slick-dots li button:before {
+            font-size: 18px;
+        }
+        .slick-dots {
+            bottom: 25px;
+        }
+    </style>
+@endsection
 @section('content')
 <div class="slick-carousel">
     @foreach($banners as $b)
@@ -92,7 +102,9 @@
         });
         $(document).ready(function () {
            $(".slick-carousel").slick({
-              dots: true
+              dots: true,
+               arrows: false,
+               autoplay: true
 
            });
             $(".slick-destacados").slick({

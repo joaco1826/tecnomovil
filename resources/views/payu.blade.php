@@ -7,9 +7,9 @@
 </head>
 <body>
 @php
-    $apiKey = "Zu3NaM89OY4egnYF4xwIY2pdxN";
+    $apiKey = "SSZ3awAZ2RGdceUb9pVNHPYFzv";
 
-	$merchantId = "704663";
+	$merchantId = "742186";
 
 	$amount = $order->total;
 
@@ -26,9 +26,9 @@
 
     <input name="merchantId"    type="hidden"  value="{{ $merchantId }}"   >
 
-    <input name="accountId"     type="hidden"  value="707753" >
+    <input name="accountId"     type="hidden"  value="747794" >
 
-    <input name="description"   type="hidden"  value="Yellow Club Online"  >
+    <input name="description"   type="hidden"  value="Tecnomovil Online"  >
 
     <input name="referenceCode" type="hidden"  value="{{ $referenceCode }}" >
 
@@ -52,7 +52,7 @@
 
     <input name="test"          type="hidden"  value="0" >
 
-    <input name="responseUrl"    type="hidden"  value="https://yellowclub.shop" >
+    <input name="responseUrl"    type="hidden"  value="https://tecnomovildelcaribe.com" >
 
 </form>
 <script src="{{ mix('js/app.js') }}"></script>
