@@ -30,7 +30,7 @@
                 @else
                     <div class="header__login"><a href="{{ url("/login") }}">INGRESAR</a><a href="{{ url("/register") }}">REGISTRARSE</a></div>
                 @endif
-                    <a href="{{ url("/carrito") }}"><div class="header__cart"><img src="{{ asset("img/cart-07.png") }}" alt="cart"> {{ \Gloudemans\Shoppingcart\Facades\Cart::count() }} articulo(s) - ${{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }}</div></a>
+                    <a href="{{ url("/carrito") }}"><div class="header__cart"><img src="{{ asset("img/cart-07.png") }}" alt="cart"> <span class="cart-count">{{ \Gloudemans\Shoppingcart\Facades\Cart::count() }}</span> articulo(s) - <span class="cart-total">${{ \Gloudemans\Shoppingcart\Facades\Cart::subtotal() }}</span></div></a>
             </div>
             <div class="header__user">
                 <a href="{{ url("/cuenta") }}"><img style="width: 26px;" src="{{ asset("img/user.png") }}" alt="user"></a>

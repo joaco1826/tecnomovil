@@ -34,7 +34,7 @@ class CartController extends BaseController
                 break;
         }
 
-        return response(json_encode(['message' => Cart::count()]), 201)->header('Content-Type', 'text/json');
+        return response(json_encode(['count' => Cart::count(), 'total' => Cart::subtotal()]), 201)->header('Content-Type', 'text/json');
 
     }
 }

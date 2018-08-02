@@ -190,7 +190,8 @@
                 data: "qty="+ qty+ "&id=" + $(obj).attr("data-id") + "&action=" + action + "&size=" + size,
                 statusCode: {
                     201: function (data) {
-                        $(".cart-count").html('('+ data.message +')');
+                        $(".cart-count").html('('+ data.count +')');
+                        $(".cart-total").html('('+ data.total +')');
                         swal({
                                 title: "Producto añadido!",
                                 text: "",
