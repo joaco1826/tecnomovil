@@ -40,6 +40,7 @@ class BuyController extends BaseController
                 foreach (Cart::content() as $c) {
                     $pro = Product::find($c->id);
                     Items::create([
+                        'image' => $pro->image,
                         'name' => $c->name,
                         'reference' => $pro->reference,
                         'price' => $c->price,

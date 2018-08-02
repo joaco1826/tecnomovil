@@ -12,7 +12,7 @@
                 <div class="footer__info">
                     <p class="footer__title">Información</p>
                     <ul>
-                        <li>Contacte con nosotros</li>
+                        <li><a href="{{ url("/contacto") }}">Contacte con nosotros</a></li>
                         <li>Términos y condiciones</li>
                         <li>Puntos de venta</li>
                     </ul>
@@ -20,9 +20,9 @@
                 <div class="footer__info">
                     <p class="footer__title">Mi cuenta</p>
                     <ul>
-                        <li>Mis pedidos</li>
-                        <li>Mis direcciones</li>
-                        <li>Mis datos personales</li>
+                        <li><a href="{{ url("/pagos") }}">Mis pedidos</a></li>
+                        <li><a href="{{ url("/direcciones") }}">Mis direcciones</a></li>
+                        <li><a href="{{ url("/cuenta") }}">Mis datos personales</a></li>
                     </ul>
                 </div>
                 <div class="footer__news">
