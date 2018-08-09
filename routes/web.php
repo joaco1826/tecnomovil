@@ -13,6 +13,7 @@
 
 use App\Models\About;
 use App\Models\Address;
+use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Country;
 use App\Models\Order;
@@ -22,7 +23,8 @@ Route::get('/', function () {
     return view('welcome', [
         'destacados' => Product::where(['status' => 'activo', 'featured' => 'SI'])->get(),
         'ofertas' => Product::where(['status' => 'activo'])->where('discount', '>', '0')->get(),
-        'banners' => \App\Models\Home::where('state', 'activo')->get()
+        'banners' => \App\Models\Home::where('state', 'activo')->where('destination', 'Principal')->get(),
+        'promo' => \App\Models\Home::where('state', 'activo')->where('destination', 'Promocion')->get()
     ]);
 });
 
@@ -52,6 +54,19 @@ Route::get('/producto/{name}/{id}', function ($name, $id) {
     return view('product', [
         'product' => $product,
         'products' => $products,
+    ]);
+})->where(['id' => '[0-9]+', 'name' => '[a-z-0-9]+']);
+
+Route::get('/blog', function () {
+    return view('blog', [
+        'blog' => Blog::where('status', 'activo')->orderByDesc('id')->get(),
+    ]);
+});
+
+Route::get('/blog/{name}/{id}', function ($name, $id) {
+    return view('detalle-blog', [
+        'blog' => Blog::find($id),
+        'blogs' => Blog::where('status', 'activo')->whereNotIn('id', [$id])->orderByDesc('id')->get(),
     ]);
 })->where(['id' => '[0-9]+', 'name' => '[a-z-0-9]+']);
 

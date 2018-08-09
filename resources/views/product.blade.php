@@ -1,7 +1,5 @@
 @extends('layouts.master')
 @section('title', 'Tecnomovil del caribe - Venta de celulares y accesorios')
-@section('description', 'Tecnomobile - Venta de celulares y accesorios')
-@section('keywords', 'tecnomobile')
 @section('content')
     <div class="content">
         <div class="product">

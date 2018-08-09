@@ -1,7 +1,5 @@
 @extends('layouts.master')
 @section('title', 'Tecnomobile - Venta de celulares y accesorios')
-@section('description', 'Tecnomobile - Venta de celulares y accesorios')
-@section('keywords', 'tecnomobile')
 @section('style')
     <style>
         .slick-dots li button:before {
@@ -65,9 +63,9 @@
 </div>
     <div class="contain">
         <div class="promo">
-            <div class="promo__col"><img src="{{ asset("img/promo-12.jpg") }}" alt="tecnomovil promociones"></div>
-            <div class="promo__col"><img src="{{ asset("img/promo-13.jpg") }}" alt="tecnomovil promociones"></div>
-            <div class="promo__col"><img src="{{ asset("img/promo-12.jpg") }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[0]->image) }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[1]->image) }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[2]->image) }}" alt="tecnomovil promociones"></div>
         </div>
     </div>
     <div class="inquietudes">

@@ -1,0 +1,96 @@
+.blog
+  padding: 2rem 0 4rem
+  @include breakpoint(medium down)
+    padding: 2rem 0 1rem
+  &__url
+    color: $wh
+    font-size: 9pt
+    margin-bottom: 0
+  h1
+    color: #414042
+    font-size: 40pt
+    text-align: center
+    margin-bottom: 2rem
+  &__contain
+    @extend .grid-x
+    &__content
+      @include xy-cell($size: 1 of 3, $gutters: 8, $gutter-type: margin)
+      @include breakpoint(small only)
+        @include xy-cell($size: 4 of 4, $gutters: 8, $gutter-type: margin)
+      @include breakpoint(medium only)
+        @include xy-cell($size: 2 of 4, $gutters: 8, $gutter-type: margin)
+      img
+        width: 100%
+        height: 35vh
+        object-fit: cover
+      p
+        padding: 1rem 1.7rem
+        color: #414042
+        font-weight: 400
+        font-size: 12pt
+    &__info
+      @include xy-cell($size: 7.5 of 10, $gutters: 120, $gutter-type: margin, $gutter-position: right)
+      @extend .clearfix
+      @include breakpoint(medium down)
+        @include xy-cell($size: 10 of 10, $gutters: 0, $gutter-type: margin)
+      h1
+        float: left
+        font-size: 20pt
+        font-weight: 300
+        color: #414042
+        width: 85%
+        text-align: left
+        line-height: 1.1
+        @include breakpoint(medium down)
+          float: none
+          width: 100%
+          margin-bottom: .3rem
+      &__date
+        font-size: 9pt
+        font-weight: 700
+        color: $gris
+        float: right
+        text-transform: uppercase
+        margin-top: .2rem
+        @include breakpoint(medium down)
+          float: none
+      &__text
+        color: #414042
+        font-weight: 400
+        text-align: justify
+        padding: 1.5rem 2rem
+        @include breakpoint(medium down)
+          padding: 1.5rem .5rem
+      img
+        width: 100%
+        @include breakpoint(medium down)
+          margin-top: .5rem
+    &__more
+      @include xy-cell($size: 2.5 of 10, $gutters: 0, $gutter-type: margin)
+      @extend .small-offset-1
+      @include breakpoint(medium down)
+        @include xy-cell($size: 10 of 10, $gutters: 0, $gutter-type: margin)
+      &__title
+        font-size: 14pt
+        font-weight: 700
+        color: #414042
+      &__content
+        padding: 2rem .5rem
+        border-bottom: 1px solid rgba(172,172,172,0.4)
+        span
+          text-transform: uppercase
+          font-size: 9pt
+          font-weight: 700
+          color: $gris
+        h4
+          color: #414042
+          font-weight: 400
+          font-size: 12pt
+        p
+          color: #414042
+          font-size: 11pt
+          font-weight: 700
+          margin-bottom: 0
+
+
+

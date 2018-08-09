@@ -4,6 +4,7 @@
     <a href="{{ url("/") }}"><div class="menu-mov__opc">Inicio</div></a>
     <a href="{{ url("/nosotros") }}"><div class="menu-mov__opc">Empresa</div></a>
     <a href="{{ url("/productos") }}"><div class="menu-mov__opc">Productos</div></a>
+    <a href="{{ url("/blog") }}"><div class="menu-mov__opc">Blog</div></a>
     <a href="{{ url("/contacto") }}"><div class="menu-mov__opc">Contáctenos</div></a>
     <div class="menu-mov__follow">
         <p>SÍGUENOS EN:</p>
@@ -21,6 +22,8 @@
                 <div><a href="{{ url("/nosotros") }}">Empresa</a></div>
                 <div>|</div>
                 <div><a href="{{ url("/productos") }}">Productos</a></div>
+                <div>|</div>
+                <div><a href="{{ url("/blog") }}">Blog</a></div>
                 <div>|</div>
                 <div><a href="{{ url("/contacto") }}">Contáctenos</a></div>
             </div>

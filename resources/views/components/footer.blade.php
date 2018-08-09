@@ -35,8 +35,8 @@
                     <p class="footer__sub">Acepto <a href="">Términos y Condiciones</a> y autorizo el <a href="">Tratamiento de datos personales.</a></p>
                     <div class="follow">
                         <p>SÍGUENOS EN:</p>
-                        <a href=""><img src="{{ asset("img/follow-06.png") }}" alt="follow face"></a>
-                        <a href=""><img src="{{ asset("img/follow-07.png") }}" alt="follow face"></a>
+                        <a target="_blank" href="{{ $cct->instagram }}"><img src="{{ asset("img/follow-06.png") }}" alt="follow insta"></a>
+                        <a target="_blank" href="{{ $cct->facebook }}"><img src="{{ asset("img/follow-07.png") }}" alt="follow face"></a>
                     </div>
                 </div>
             </div>
