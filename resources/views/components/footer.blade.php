@@ -1,7 +1,7 @@
 <footer>
     <div class="footer">
         <div class="content">
-            <p class="web">TECNOMOVIL.COM</p>
+            <p class="web">TECNOMOVILDELCARIBE.COM</p>
             <div class="footer__row">
                 <div class="footer__contact">
                     <p class="footer__title">Información de contacto</p>
