@@ -13,7 +13,7 @@
                     <p class="footer__title">Información</p>
                     <ul>
                         <li><a href="{{ url("/contacto") }}">Contacte con nosotros</a></li>
-                        <li>Términos y condiciones</li>
+                        <li><a target="_blank" href="{{ url("/files/terminos-y-condiciones.pdf") }}">Términos y condiciones</a></li>
                         <li>Puntos de venta</li>
                     </ul>
                 </div>

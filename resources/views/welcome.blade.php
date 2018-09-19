@@ -63,9 +63,9 @@
 </div>
     <div class="contain">
         <div class="promo">
-            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[0]->image) }}" alt="tecnomovil promociones"></div>
-            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[1]->image) }}" alt="tecnomovil promociones"></div>
-            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ asset($promo[2]->image) }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ $promo[0]->image }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ $promo[1]->image }}" alt="tecnomovil promociones"></div>
+            <div class="promo__col"><img src="https://admin.tecnomovildelcaribe.com/{{ $promo[2]->image }}" alt="tecnomovil promociones"></div>
         </div>
     </div>
     <div class="inquietudes">
