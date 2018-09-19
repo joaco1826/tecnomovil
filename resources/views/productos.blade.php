@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Tecnomovil - Productos')
+@section('title', 'Tecnomovil del caribe - Productos')
 @section('style')
     <style>
         #slider-range {

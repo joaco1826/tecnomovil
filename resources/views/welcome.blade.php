@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Tecnomobile - Venta de celulares y accesorios')
+@section('title', 'Tecnomovil del caribe - Venta de celulares y accesorios')
 @section('style')
     <style>
         .slick-dots li button:before {

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Tecnomovil - Contactenos')
+@section('title', 'Tecnomovil del caribe - Contactenos')
 @section('content')
     <form id="frmContact" data-abide novalidate>
     <div class="contact">
